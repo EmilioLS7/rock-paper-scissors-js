@@ -6,8 +6,6 @@ function getComputerChoice() {
 };
 
 function playRound(playerSelection, computerSelection) {
-    getComputerChoice();
-    computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         return 'Tie!';
     } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
@@ -24,6 +22,15 @@ function playRound(playerSelection, computerSelection) {
         return 'You lose! Scissors beats Paper';
     }
 }
-let playerSelection = 'Rock';
+let playerSelection = 'Scissors';
 let computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection))
+console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let window = prompt('Rock, Paper or Scissors?');
+        console.log(playRound(window, computerSelection));
+    };
+};
+
+game();
