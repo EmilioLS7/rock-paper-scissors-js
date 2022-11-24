@@ -34,3 +34,5 @@ function game() {
 };
 
 game();
+
+// i dont know how to keep score, i will get it someday
